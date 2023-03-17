@@ -1,0 +1,26 @@
+from PIL import Image, ImageEnhance
+
+image = Image.open('diachihinhanh')        #lấy ảnh có sẵn
+#image.show()
+#print(ImageColor.colormap)                     #hiển thị màu
+image_new = Image.new('RGBA',(1000,600))        #tạo ảnh mới
+#image_new.show()
+
+#image_new.save('D:\\pil\\black.png')           #lưu ảnh
+
+#image.crop(top,left,right,bottom)              #cắt ảnh
+
+image.transpose(Image.Transpose.FLIP_LEFT_RIGHT)  #lật ảnh ngang
+image.transpose(Image.Transppose.FLIP_TOP_BOTTOM) #lật ảnh dọc
+
+#image.resize((chieurong,chieudai))              #đổi size
+
+#chỉnh màu
+color_enhancer = ImageEnhance.Color(image)
+contrast_enhancer = ImageEnhance.Contrast(image)
+brightness_enhancer = ImageEnhance.Brightness(image)
+sharpness_enhancer = ImageEnhance.Sharpness(image)
+print(image.size)
+print(image.filename)
+print(image.format)
+print(image.format_description)
