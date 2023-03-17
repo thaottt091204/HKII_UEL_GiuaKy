@@ -8,7 +8,7 @@ image_new = Image.new('RGBA',(1000,600))        #tạo ảnh mới
 
 #image_new.save('D:\\pil\\black.png')           #lưu ảnh
 
-#image.crop(top,left,right,bottom)              #cắt ảnh
+#image.crop(top,left,right,bottom)              
 
 image.transpose(Image.Transpose.FLIP_LEFT_RIGHT)  #lật ảnh ngang
 image.transpose(Image.Transppose.FLIP_TOP_BOTTOM) #lật ảnh dọc
